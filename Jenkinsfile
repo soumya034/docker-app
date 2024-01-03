@@ -6,12 +6,14 @@ pipeline {
     stages {
         stage('first stage') {
             steps {
-                echo "${params.CHOICE_PARAMETER}: environment completed"
+		def firstChoice = params.CHOICE_PARAMETER[0]
+                echo "${firstChoice}: environment completed"
             }
         }
 	stage('second stage') {
             steps {
-                echo "${params.CHOICE_PARAMETER.choice[0]}: environment completed"
+		def secondChoice = params.CHOICE_PARAMETER[1]
+                echo "${secondChoice}: environment completed"
             }
         }
     }
