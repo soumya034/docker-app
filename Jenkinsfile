@@ -11,7 +11,7 @@ pipeline {
         }
 	stage('second stage') {
             steps {
-                echo "${params.CHOICE_PARAMETER[0]}: environment completed"
+                echo "${params.CHOICE_PARAMETER.choice[0]}: environment completed"
             }
         }
     }
