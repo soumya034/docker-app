@@ -6,10 +6,10 @@ pipeline {
     stages {
         stage('first stage') {
             steps {
-		script {
+		// script {
                 sh "echo environment completed: ${env}"
 		// ${params.PARAMETER}"
-		}
+		// }
             }
          }
 	// stage('second stage') {
