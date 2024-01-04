@@ -7,7 +7,7 @@ pipeline {
         stage('first stage') {
             steps {
 		script {
-                echo "environment completed: ${env}"
+                sh "echo environment completed: ${env}"
 		// ${params.PARAMETER}"
 		}
             }
